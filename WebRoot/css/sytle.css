@@ -1,0 +1,155 @@
+a{ color: #0099FF; }
+
+[v-cloak] {
+	display: none;
+} 
+.container{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.info-line{
+	padding-bottom: 5px;
+	border-bottom: 3px solid #0099FF;
+}
+
+.gold{
+	color: #CC9900;
+}
+
+
+/* header */
+header{
+	z-index: 9;
+	position: fixed !important;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding: 5px 0;
+	background: #fff;
+}
+.aside{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    bottom: 0;
+    box-sizing: content-box;
+    width: 250px;
+    min-height: 100%;
+    background: #fff;
+    -webkit-overflow-scrolling: touch;
+    -webkit-transition: -webkit-transform 350ms cubic-bezier(.165,.84,.44,1);
+    transition: transform 350ms cubic-bezier(.165,.84,.44,1);
+    transform: translate3d(-250px, 0px, 0px);
+}
+.aside.active{ transform: translate3d(0, 0px, 0px); }
+
+.backdrop{
+    position: absolute;
+    z-index: 990;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: block;
+    transition: background 350ms cubic-bezier(.165,.84,.44,1);
+    background: rgba(0,0,0,.4);
+    box-shadow: -4px 0 4px rgba(0,0,0,.5),4px 0 4px rgba(0,0,0,.5);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.aside .usered{
+	background-color: #0099FF;
+}
+
+.main{
+	position: absolute;
+	top: 40px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+/* 系统信息 */
+.message-item{
+	position: relative;
+	margin-top: 5px;
+	padding: 10px;
+	background-color: #fff;
+	border-radius: 5px;
+}
+
+.message-item.new:before{
+	content: ' ';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: red;
+	right: 10px;
+	top: 10px;
+}
+
+.panel{
+	padding: 8px 15px;
+	background-color: #0099FF;
+	color: #fff;
+}
+
+/* 个人资料 */
+.userinfo{ 
+    padding: 20px 0;
+    border-bottom: 1px solid #f0f0f0;
+    background-color: #0099ff; 
+    color: #fff;
+    background-image: url('../image/user-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.choose-img{
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+}
+
+.userhead{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+
+.step_item{
+	display: none;
+}
+.step_item.active{
+	display: block;
+}
+
+/* 密码强度 */
+.pw-letter{
+	border: 1px solid #e5e5e5;
+	height: 18px;
+	/*background-image: -webkit-linear-gradient(left, #F00,#f96, #AAFF70);
+	background-image: linear-gradient(left, #F00,#f96, #AAFF70);*/
+	margin: 0 5px;
+
+}
+.pw-inner{ 
+	height: 100%;  
+	text-align: center;
+	color: #fff;
+	width: 0;
+	transition: width 0.5s ease;
+}
+.bg-success{background-color: #09BB07;}
+.bg-warn{background-color: #FF8D00;}
+.bg-danger{background-color: #F43530;}
